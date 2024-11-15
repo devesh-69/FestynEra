@@ -256,28 +256,6 @@ function Home() {
                             </CardContent>
                         </Card>
 
-                        {/* Tech Events Card */}
-                        <Card className="transition-transform hover:shadow-lg">
-                            <CardHeader>
-                                <CardTitle>Tech Events</CardTitle>
-                                <p className="text-sm text-gray-500">Upload your Tech submission here</p>
-                            </CardHeader>
-                            <CardContent className="space-y-4">
-                                <Select onValueChange={(value) => setSelectedCategory((prev) => ({ ...prev, tech: value }))}>
-                                    <SelectTrigger>
-                                        <SelectValue placeholder="Select Tech" />
-                                    </SelectTrigger>
-                                    <SelectContent>
-                                        <SelectItem value="webdev">Web Dev</SelectItem>
-                                        <SelectItem value="appdev">App Dev</SelectItem>
-                                        <SelectItem value="android">Android</SelectItem>
-                                    </SelectContent>
-                                </Select>
-                                <Button className="w-full" onClick={() => handleShowForm("tech")}>Submit here</Button>
-                                {activeCategory === "tech" && <SubmissionForm formData={formData} handleChange={handleChange} handleFileChange={handleFileChange} handleSubmit={handleSubmit} />}
-                            </CardContent>
-                        </Card>
-
                         {/* Cultural Events Card */}
                         <Card className="transition-transform hover:shadow-lg">
                             <CardHeader>
@@ -290,12 +268,42 @@ function Home() {
                                         <SelectValue placeholder="Select Cultural" />
                                     </SelectTrigger>
                                     <SelectContent>
-                                        <SelectItem value="dance">Dance</SelectItem>
-                                        <SelectItem value="singing">Singing</SelectItem>
+                                        <SelectItem value="dance">DANCING</SelectItem>
+                                        <SelectItem value="singing">SINGING</SelectItem>
+                                        <SelectItem value="reels">INSTAGRAM REELS</SelectItem>
+                                        <SelectItem value="rapping">RAPPING</SelectItem>
+                                        <SelectItem value="beatboxing">BEAT BOXING</SelectItem>
+                                        <SelectItem value="shyari">SHYARI</SelectItem>
+                                        <SelectItem value="fashionshow">FASHION SHOW</SelectItem>
                                     </SelectContent>
                                 </Select>
                                 <Button className="w-full" onClick={() => handleShowForm("cultural")}>Submit here</Button>
                                 {activeCategory === "cultural" && <SubmissionForm formData={formData} handleChange={handleChange} handleFileChange={handleFileChange} handleSubmit={handleSubmit} />}
+                            </CardContent>
+                        </Card>
+
+                        {/* Tech Events Card */}
+                        <Card className="transition-transform hover:shadow-lg">
+                            <CardHeader>
+                                <CardTitle>Tech Events</CardTitle>
+                                <p className="text-sm text-gray-500">Upload your Tech submission here</p>
+                            </CardHeader>
+                            <CardContent className="space-y-4">
+                                <Select onValueChange={(value) => setSelectedCategory((prev) => ({ ...prev, tech: value }))}>
+                                    <SelectTrigger>
+                                        <SelectValue placeholder="Select Tech" />
+                                    </SelectTrigger>
+                                    <SelectContent>
+                                        <SelectItem value="quizzone">QUIZ ZONE</SelectItem>
+                                        <SelectItem value="appdev">ERROR HUNT</SelectItem>
+                                        <SelectItem value="gaming">GAMING</SelectItem>
+                                        <SelectItem value="bloggerspot">BLOGGER SPOT</SelectItem>
+                                        <SelectItem value="webdesigning">WEB DESIGNING</SelectItem>
+                                        <SelectItem value="presention">PRESENTION DISPLAY</SelectItem>
+                                    </SelectContent>
+                                </Select>
+                                <Button className="w-full" onClick={() => handleShowForm("tech")}>Submit here</Button>
+                                {activeCategory === "tech" && <SubmissionForm formData={formData} handleChange={handleChange} handleFileChange={handleFileChange} handleSubmit={handleSubmit} />}
                             </CardContent>
                         </Card>
                     </div>
