@@ -87,7 +87,7 @@ function Home() {
         }
 
         try {
-            const response = await fetch("http://localhost:8080/api/submissions", {
+            const response = await fetch("https://festynerabackend.vercel.app/api/submissions", {
                 method: "POST",
                 body: formDataToSend,
             });
