@@ -44,9 +44,6 @@ const errorHandler = require("../middlewares/errorHandler");
 
 const app = express();
 
-// Log the MONGO_URI to check if it's loaded correctly
-console.log("MONGO_URI:", process.env.MONGO_URI);
-
 // Middleware
 app.use(express.json());
 app.use(cors());
